@@ -1,0 +1,6 @@
+D:\Projetos .Net\SocialNetwork\SocialNetwork\bin\Release\SocialNetwork.exe.config
+D:\Projetos .Net\SocialNetwork\SocialNetwork\bin\Release\SocialNetwork.exe
+D:\Projetos .Net\SocialNetwork\SocialNetwork\bin\Release\SocialNetwork.pdb
+D:\Projetos .Net\SocialNetwork\SocialNetwork\obj\Release\SocialNetwork.exe
+D:\Projetos .Net\SocialNetwork\SocialNetwork\obj\Release\SocialNetwork.pdb
+D:\Projetos .Net\SocialNetwork\SocialNetwork\obj\Release\SocialNetwork.csprojResolveAssemblyReference.cache
