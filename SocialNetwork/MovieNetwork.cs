@@ -1,6 +1,6 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace SocialNetwork
 {
@@ -39,17 +39,7 @@ namespace SocialNetwork
 
         public List<Consumidor> getAmigos(int c1)
         {
-            var amigos = new List<Consumidor>();
-
-            foreach (var amizade in _amizades)
-            {
-                var amizadeArray = (int[]) amizade;
-                if (amizadeArray[0] == c1)
-                {
-                    amigos.Add(_consumidores[amizadeArray[1]]);
-                }
-            }
-            return amigos;
+            return (from int[] amizadeArray in _amizades where amizadeArray[0] == c1 select _consumidores[amizadeArray[1]]).ToList();
         }
 
         /*
@@ -65,20 +55,8 @@ namespace SocialNetwork
         {
             var amigosC1 = getAmigos(c1);
             var amigosC2 = getAmigos(c2);
-            var distance = 0;
 
-            foreach (var amigoC1 in amigosC1)
-            {
-                foreach (var amigoC2 in amigosC2)
-                {
-                    if (amigoC1.id == amigoC2.id)
-                    {
-                        distance++;
-                    }
-                }
-            }
-
-            return distance;
+            return (from amigoC1 in amigosC1 from amigoC2 in amigosC2 where amigoC1.id == amigoC2.id select amigoC1).Count();
         }
     }
 }
