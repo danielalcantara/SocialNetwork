@@ -37,6 +37,10 @@ namespace SocialNetwork
             _amizades.Add(amizade);
         }
 
+        /*
+         * Método para retornar uma lista de consumidores que representa as conexões ou amizades que esse consumidor
+         * possui. Para isso foi utilizado uma consulta LINQ ao invés de laços for por questões de desempenho.
+         */
         public List<Consumidor> getAmigos(int c1)
         {
             return (from int[] amizadeArray in _amizades where amizadeArray[0] == c1 select _consumidores[amizadeArray[1]]).ToList();
@@ -49,7 +53,7 @@ namespace SocialNetwork
          * mais complexos utilizados para sugestês de novas amizades, como por exemplo muitos interesses em comum, fan pages, etc.
          * 
          * Esse metedo retorna o número de conexões em comum, buscando as listas de amizades dos 2 consumidores e percorrendo ambas
-         * e contando as intersecções.
+         * e contando as intersecções, para isso utilizei uma consulta LINQ ao invés de laços for por questão de desempenho.
          */
         public int getDistance(int c1, int c2)
         {

@@ -11,7 +11,7 @@ namespace SocialNetwork
 
             movieNetwork.adicionaConsumidor(1, "Carlos Pereira");
             movieNetwork.adicionaConsumidor(2, "Daniel Alcântara");
-            movieNetwork.adicionaConsumidor(3, "Mario Junio");
+            movieNetwork.adicionaConsumidor(3, "Mario Junior");
             movieNetwork.adicionaConsumidor(4, "Antônio Magalhães");
             movieNetwork.adicionaConsumidor(5, "Juliana Kabana");
             movieNetwork.adicionaConsumidor(6, "Agatha Christie");
