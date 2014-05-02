@@ -21,14 +21,14 @@ namespace SocialNetwork
         public void AdicionaConsumidor(int id, string nome)
         {
             var consumidor = new Consumidor(id, nome);
-            consumidor.id = id;
-            consumidor.nome = nome;
+            consumidor.Id = id;
+            consumidor.Nome = nome;
             _consumidores.Add(id, consumidor);
         }
 
         public string GetConsumidor(int c1)
         {
-            return _consumidores[c1].nome;
+            return _consumidores[c1].Nome;
         }
 
         public void AdicionaAmizade(int c1, int c2)
@@ -60,7 +60,7 @@ namespace SocialNetwork
             var amigosC1 = GetAmigos(c1);
             var amigosC2 = GetAmigos(c2);
 
-            return (from amigoC1 in amigosC1 from amigoC2 in amigosC2 where amigoC1.id == amigoC2.id select amigoC1).Count();
+            return (from amigoC1 in amigosC1 from amigoC2 in amigosC2 where amigoC1.Id == amigoC2.Id select amigoC1).Count();
         }
     }
 }

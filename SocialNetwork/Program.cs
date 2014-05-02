@@ -4,10 +4,9 @@ namespace SocialNetwork
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             var movieNetwork = new MovieNetwork();
-            var distance = 0;
 
             movieNetwork.AdicionaConsumidor(1, "Carlos Pereira");
             movieNetwork.AdicionaConsumidor(2, "Daniel Alcântara");
@@ -22,7 +21,7 @@ namespace SocialNetwork
             movieNetwork.AdicionaAmizade(3, 2);
             movieNetwork.AdicionaAmizade(3, 6);
 
-            distance = movieNetwork.GetDistance(1, 3);
+            var distance = movieNetwork.GetDistance(1, 3);
 
             Console.WriteLine("A distância entre os consumidores {0} e {1} é: {2}", movieNetwork.GetConsumidor(1), movieNetwork.GetConsumidor(3), distance);
             Console.ReadKey();
