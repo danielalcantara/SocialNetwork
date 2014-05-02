@@ -8,14 +8,14 @@ namespace SocialNetwork
 {
     interface IMovieNetwork
     {
-        void adicionaConsumidor(int id, String nome);
+        void AdicionaConsumidor(int id, String nome);
 
-        String getConsumidor(int c1);
+        String GetConsumidor(int c1);
 
-        void adicionaAmizade(int c1, int c2);
+        void AdicionaAmizade(int c1, int c2);
 
-        List<Consumidor> getAmigos(int c1);
+        List<Consumidor> GetAmigos(int c1);
 
-        int getDistance(int c1, int c2);
+        int GetDistance(int c1, int c2);
     }
 }
